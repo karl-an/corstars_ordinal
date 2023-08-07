@@ -21,16 +21,18 @@ A correlation matrix with stars and the option to mix Pearson and Spearman corre
 Here's an example of how to use the function with a dataset that contains both continuous and ordinal variables:
 
 ```R
-# Simulate some data
+# Simulate some data with multiple continuous and ordinal variables
 set.seed(123)
 data <- data.frame(
   continuous_var1 = rnorm(100),
   continuous_var2 = rnorm(100),
-  ordinal_var = sample(1:5, 100, replace = TRUE)
+  continuous_var3 = rnorm(100),
+  ordinal_var1 = sample(1:5, 100, replace = TRUE),
+  ordinal_var2 = sample(1:5, 100, replace = TRUE)
 )
 
-# Use the corstars function, specifying that the third column is ordinal
-result <- corstars(data, ordinal_vars = 3, removeTriangle = "lower", result = "none")
+# Use the corstars function, specifying that the fourth and fifth columns are ordinal
+result <- corstars(data, ordinal_vars = c(4, 5), removeTriangle = "lower", result = "none")
 
 # Print the result
 print(result)
