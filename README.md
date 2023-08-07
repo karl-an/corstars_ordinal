@@ -32,7 +32,7 @@ data <- data.frame(
 )
 
 # Use the corstars function, specifying that the fourth and fifth columns are ordinal
-result <- corstars(data, ordinal_vars = c(4, 5), removeTriangle = "lower", result = "none")
+result <- corstars(data, ordinal_vars = c(4, 5), removeTriangle = "upper", result = "none")
 
 # Print the result
 print(result)
