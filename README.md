@@ -1,5 +1,5 @@
 # corstars_ordinal
-A correlation matrix with stars and the option to mix Pearson and Spearman correlations in R
+A correlation matrix with asterisks and the option to mix Pearson and Spearman correlations in R
 
 `corstars` is an R function that computes a correlation matrix for a given dataset, supporting both Pearson and Spearman correlations. Specific indices can be used to denote different correlation methods.
 
